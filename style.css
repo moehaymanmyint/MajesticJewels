@@ -6,14 +6,27 @@
 :root{
     --bg-color: #111111;
     --text-color: white;
-    --navbar-font: "Ingrid Darling", cursive;
+    --normal-font: "Ingrid Darling", cursive;
     --title-font: "Lora", serif;
     --para-font: "Imprima", sans-serif;
 }
+
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
     scroll-behavior: smooth;
+}
+
+.img-list {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.img-list:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+    filter: brightness(1.1);
+   
 }
 
 hr {
@@ -64,8 +77,8 @@ hr {
 .navbar-list li{
     list-style: none;
     padding: 20px;
-    font-family: var(--navbar-font);
-    font-size: 2.5rem;
+    font-family: var(--title-font);
+    font-size: 2rem;
 }
 
 .navbar-list a{
@@ -76,13 +89,13 @@ hr {
 .navbar-list a:hover{
     color: #c7c5c5;
 }
+
 /* Home */
 .home .row{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 50px;
-
 }
 
 .home img{
@@ -108,8 +121,9 @@ hr {
 }
 
 .home-text h2{
-    font-family: var(--navbar-font);
+    font-family: var(--normal-font);
     font-size: 4.5rem;
+    
 }
 
 button{
@@ -133,22 +147,25 @@ button:hover{
     margin: 20px;
 }
 
-.latest h3 {
+.latest h3{
     font-family: var(--title-font);
     font-size: 30px;
-    margin: 20px 40px;
+    margin: 50px;
+    text-align: center;
 }
 
 .latest-card .row{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    padding: 0 20px;
 }
 
 .latest .card-info{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    flex: 1 1 20%;
 }
 
 .latest-card .card-info img,
@@ -180,7 +197,7 @@ button:hover{
 
 /* Discount */
 .discount{
-    margin: 20px 100px;
+    margin: 50px 100px;
 }
 
 .discount .row{
@@ -211,7 +228,7 @@ button:hover{
 }
 
 .discount h2{
-    font-family: var(--navbar-font);
+    font-family: var(--normal-font);
     font-size: 70px;
     margin: 20px;
     word-spacing: 15px;
@@ -228,10 +245,14 @@ button:hover{
 }
 
 /* Blogs */
+.blogs{
+    margin: 40px;
+}
+
 .blogs h1{
     font-family: var(--title-font);
     font-size: 40px;
-    margin: 20px;
+    margin: 40px;
     text-align: center;
 }
 
@@ -239,8 +260,6 @@ button:hover{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    offset: 2;
 }
 
 .blogs .card{
@@ -251,6 +270,7 @@ button:hover{
     color: var(--bg-color);
     border-radius: 5px;
     margin: 0 15px;
+    flex: 1 1 20%;
 }
 
 .blogs img{
@@ -295,10 +315,12 @@ button:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 15px;
 }
 
 .waterproof-blogs .blog-img{
     text-align: center;
+    width: 80%;
 }
 
 .waterproof-blogs img{
@@ -315,7 +337,7 @@ button:hover{
 
 .waterproof-blogs p{
     font-family: var(--para-font);
-    font-size: 20px;
+    font-size: 22px;
     margin: 25px;
 }
 
@@ -338,12 +360,12 @@ button:hover{
 .jewelery .row{
     display: flex;
     flex-direction: row;
-    flex-flow: wrap;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .jewelery .card{
-    width: 20%;
+    flex: 1 1 15%;
 }
 
 .jewelery .card-body{
@@ -354,7 +376,7 @@ button:hover{
 }
 
 .jewelery img{
-    width: 100%;
+    width: 80%;
 }
 
 .jewelery p{
@@ -415,25 +437,25 @@ button:hover{
 }
 
 .gifts img{
-    width: 100%;
+    width: 90%;
 }
 
 .gifts .row h4{
     font-family: var(--title-font);
     font-size: 50px;
-    margin: 25px;
+    margin: 20px;
     text-align: center;
 }
 
 .gifts .row p{
     font-family: var(--para-font);
     font-size: 20px;
-    margin: 25px;
+    margin: 20px;
     text-align: center;
 }
 
 .gifts button{
-    margin: 25px;
+    margin: 20px;
 }
 
 /* Get In Touch */
@@ -499,6 +521,610 @@ button:hover{
     background-color: var(--text-color);
     color: var(--bg-color);
 }
+
+@media (max-width: 1180px){
+    .nav-logo .login,
+    .nav-logo .cart {
+        font-size: 20px;
+    }
+
+    .nav-logo img{
+        width: 18%;
+    }
+
+    .navbar-list li{
+        font-size: 1.6rem;
+    }
+
+    .home img{
+        width: 75%;
+        margin-left: 50px;
+    }
+
+    .home-text h4{
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .home-text h2{
+        font-size: 2.6rem;
+        margin: 10px;
+    }
+
+    .discount h6,
+    .discount h1{
+        font-size: 30px;
+        line-height: 15px;
+    }
+
+    .discount h2{
+        font-size: 40px;
+    }
+
+    .discount p{
+        font-size: 15px;
+    }
+
+    .discount button{
+        font-size: 20px;
+    }
+
+    .blogs h1{
+        font-size: 35px;
+    }
+
+    .blogs img{
+        width: 90%;
+    }
+
+    .blogs h2{
+        font-size: 18px;
+    }
+
+    .blogs h4{
+        font-size: 14px;
+    }
+
+    .blogs .card p{
+        font-size: 16px;
+    }
+
+    .waterproof-blogs img{
+        width: 80%;
+    }
+
+    .waterproof-blogs h4{
+        font-size: 35px;
+        margin: 18px;
+    }
+
+    .waterproof-blogs p{
+        font-size: 16px;
+        margin: 18px;
+    }
+
+    .waterproof-blogs button{
+        font-size: 18px;
+        margin: 18px;
+    }
+
+    .jewelery h1{
+        font-size: 30px;
+    }
+
+    .jewelery p,
+    .jewelery button{
+        font-size: 13px;
+    }
+
+    .gifts h1{
+        font-size: 30px;
+    }
+
+    .gifts p{
+        display: none;
+    }
+
+    .gifts img{
+        width: 80%;
+    }
+
+    .gifts .row h4{
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .gifts button{
+        font-size: 18px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    /* Nav */
+    .nav-logo .login,
+    .nav-logo .cart,
+    .nav-logo .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .nav-logo img{
+        width: 10%;
+    }
+
+    .navbar-list li{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    /* Home */
+    .home .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+    }
+
+    .home .home-img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .home img{
+        width: 70%;
+    }
+
+    .home .home-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
+        width: 80%;
+    }
+
+    .home h2{
+        font-size: 2.3rem;
+    }
+
+    .home h4{
+        font-size: 16px;
+    }
+
+    button{
+        font-size: 16px;
+    }
+
+    /* Latest */
+    .latest h3{
+        font-size: 20px;
+        margin: 25px;
+    }
+
+    .latest .latest-card h4{
+        font-size: 12px;
+    }
+
+    .latest-card img{
+        width: 70%;
+    }
+
+    .latest .see-more-btn{
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    /* Discount */
+    .discount .video{
+       max-width: 100%;
+    }
+    .discount video{
+        width: 100%;
+    }
+
+    .discount h6,
+    .discount h1{
+        font-size: 28px;
+        line-height: 20px;
+        margin: 10px;
+    }
+
+    .discount h2{
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .discount p{
+        font-size: 10px;
+        margin: 10px;
+    }
+
+    .discount button{
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    /* Blogs */
+    .blogs{
+        margin: 20px;
+    }
+    .blogs h1{
+        font-size: 25px;
+        margin: 20px;
+    }
+    .blog img{
+        width: 70%;
+        margin: 10px;
+    }
+    .blogs h2{
+        font-size: 10px;
+        margin: 5px 10px;
+    }
+    .blogs h4{
+        font-size: 12px;
+        margin: 5px 10px;
+    }
+    .blogs .card p{
+        font-size: 10px;
+        margin: 5px 10px;
+    }
+
+    .waterproof-blogs .blog-img{
+        width: 80%;
+    }
+    .waterproof-blogs img{
+        width: 80%;
+    }
+    .waterproof-blogs h4{
+        font-size: 28px;
+        margin: 15px;
+    }
+    .waterproof-blogs p{
+        font-size: 12px;
+        margin: 15px;
+    }
+    .waterproof-blogs button{
+        font-size: 18px;
+        margin: 15px;
+    }
+
+    /* Jewelery */
+    .jewelery h1{
+        font-size: 25px;
+    }
+
+    .jewelery .card {
+        flex: 1 1 25%;
+    }
+
+    .jewelery img{
+        width: 70%;
+    }
+
+    .jewelery p{
+        font-size: 15px;
+    }
+
+    .jewelery button{
+        font-size: 10px;
+    }
+
+    /* Gifts */
+    .gifts h1{
+        font-size: 30px;
+    }
+
+    .gifts p{
+        display: none;
+    }
+
+    .gifts .col-4{
+        width: 100%;
+    }
+
+    .gifts img{
+        width: 100%;
+    }
+    
+    .gifts .row h4{
+        font-size: 25px;
+        margin: 15px;
+    }
+
+    .gifts .row button{
+        font-size: 15px;
+    }
+
+    /* Get in Touch */
+    .get-in-touch .title{
+        font-size: 30px;
+    }
+
+    .get-in-touch .para{
+        font-size: 18px;
+    }
+
+    .get-in-touch input{
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .get-in-touch span{
+        font-size: 20px;
+    }
+    .get-in-touch i{
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px){
+    .navbar-list li{
+        font-size: 1rem;
+    }
+
+    .home h2{
+        font-size: 2rem;
+    }
+
+    .home h4{
+        font-size: 12px;
+    }
+
+    .home button{
+        font-size: 10px;
+    }
+
+    .discount h6,
+    .discount h1{
+        font-size: 15px;
+        line-height: 10px;
+    }
+    .discount h2{
+        font-size: 25px;
+    }
+    .discount p{
+        font-size: 8px;
+    }
+    .discount button{
+        font-size: 10px;
+    }
+
+    .waterproof-blogs h4{
+        font-size: 20px;
+    }
+    .waterproof-blogs p{
+        font-size: 12px;
+    }
+    .waterproof-blogs button{
+        font-size: 13px;
+    }
+    .jewelery p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 660px) {
+    .home h2{
+        font-size: 1.5rem;
+    }
+    .home h4{
+        font-size: 10px;
+    }
+
+    .latest .latest-card h4{
+        font-size: 10px;
+    }
+
+    .latest .latest-card button{
+        font-size: 12px;
+    }
+
+    .discount .discount-text{
+        display: none;
+    }
+
+    .discount .video{
+        width: 70%;
+    }
+
+    .waterproof-blogs p, 
+    .waterproof-blogs button{
+        display: none;
+    }
+
+    .waterproof-blogs .blog-img{
+        width: 100%;
+    }
+
+    .gifts h1{
+        font-size: 20px;
+    }
+
+    .gifts .row h4{
+        font-size: 15px;
+    }
+
+    .gifts .row button{
+        font-size: 10px;
+    }
+
+    .get-in-touch .title{
+        font-size: 20px;
+    }
+
+    .get-in-touch .para{
+        font-size: 14px;
+    }
+
+    .get-in-touch form{
+        margin: 12px;
+    }
+    .get-in-touch input{
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .get-in-touch i{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo{
+        margin: 0;
+    }
+    .nav-logo .row .logo {
+        display: flex;
+        justify-content: start;
+        margin: 0 10px;
+    }
+    .nav-logo .login,
+    .nav-logo .cart,
+    .navbar-list li{
+        display: none;
+    }
+    .nav-logo img{
+        width: 10%;
+    }
+    .home .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .home img{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .home h4{
+        display: none;
+    }
+    .home h2{
+        font-size: 30px;
+    }
+
+    .latest{
+        margin: 5px;
+    }
+    .latest h3{
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .latest-card .card-info h4{
+        font-size: 10px;
+        padding: 0 10px;
+    }
+
+    .see-more-btn button,
+    .see-more-btn i{
+        display: none;
+    }
+
+    .latest .card-info{
+        flex: 1 1 40%;       
+    }
+
+    .discount{
+        display: none;
+    }
+
+    .blogs {
+        margin: 20px;
+    }
+
+    .blogs h1{
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    .blogs .row{
+        flex-wrap: wrap;
+    }
+
+    .blogs .card{
+        flex: 1 1 50%;
+        margin: 30px;
+    }
+
+    .blogs img{
+        width: 80%;  
+        margin: 25px 15px;
+    }
+
+    .blogs h2,
+    .blogs h4,
+    .blogs .card p{
+        margin: 5px 30px;
+        font-size: large;
+    }
+
+    .waterproof-blogs .row{
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .waterproof-blogs img{
+        width: 50%;
+    }
+
+    .jewelery {
+        margin: 5px;
+    }
+
+    .jewelery h1{
+        margin: 10px;
+        font-size: 22px;
+    }
+    .jewelery .card {
+        flex: 1 1 30%;
+    }
+
+    .gifts{
+        margin: 10px;
+    }
+
+    .gifts h1{
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .gifts .row{
+        flex-direction: column;
+    }
+
+    .gifts img{
+        width: 75%;
+    }
+
+    .gifts .row h4{
+        margin: 10px;
+    }
+
+    .gifts button{
+        margin: 5px;
+    }
+
+    .get-in-touch span{
+        font-size: 16px;
+    }
+
+    .footer{
+        font-size: 10px;
+        padding: 5px;
+        margin-top: 0;
+    }
+}
+
+
 
 
 
